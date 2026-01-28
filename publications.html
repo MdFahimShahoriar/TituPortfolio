@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Publications - Md. Fahim Shahoriar Titu">
+  
+  <title>Publications - Md. Fahim Shahoriar Titu</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-blue: #1e3a5f;
+      --accent-blue: #2e5090;
+      --light-blue: #4a7ba7;
+      --gold-accent: #b8860b;
+      
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --bg-tertiary: #f0f2f5;
+      
+      --text-primary: #2c3e50;
+      --text-secondary: #5a6c7d;
+      --text-light: #718096;
+      
+      --border-light: #e2e8f0;
+      --border-medium: #cbd5e0;
+      
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.08);
+      
+      --max-width: 1100px;
+      --serif: 'Crimson Text', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.5;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-blue);
+    }
+
+    /* Navigation */
+    header {
+      background: var(--bg-primary);
+      border-bottom: 2px solid var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-blue);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .cv-download {
+      padding: 8px 16px;
+      background: var(--primary-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cv-download:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 0;
+      background: var(--bg-secondary);
+    }
+
+    .section-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 30px;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+
+    /* Publications Grid */
+    .publications-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Publication Card */
+    .publication-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 16px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s ease, border-color .2s ease;
+      min-height: 140px;
+      overflow: hidden;
+    }
+
+    .publication-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-medium);
+    }
+
+    /* Image / Icon container */
+    .publication-image {
+      flex: 0 0 160px; /* Fixed width */
+      height: 120px;   /* Fixed height */
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      background: var(--bg-tertiary); /* Light grey background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .publication-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .25s ease;
+    }
+
+    /* Fallback Icon Style */
+    .publication-image i {
+      font-size: 40px;
+      color: var(--light-blue);
+      opacity: 0.8;
+    }
+
+    .publication-card:hover .publication-image img {
+      transform: scale(1.05);
+    }
+
+    /* Details */
+    .publication-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .publication-type {
+      display: inline-block;
+      padding: 3px 10px;
+      background: var(--primary-blue);
+      color: white;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 8px;
+    }
+
+    .publication-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .publication-title a {
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+
+    .publication-title a:hover {
+      color: var(--accent-blue);
+      text-decoration: underline;
+    }
+
+    .publication-authors {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .publication-authors .highlight {
+      font-weight: 700;
+      color: var(--primary-blue);
+      border-bottom: 1px solid var(--gold-accent);
+    }
+
+    .publication-venue {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .publication-meta {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 3px 8px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .meta-badge.impact {
+      background: #fef3c7;
+      color: #92400e;
+      border-color: #fde68a;
+    }
+
+    .publication-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pub-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 10px;
+      background: transparent;
+      border: 1px solid var(--border-medium);
+      border-radius: 3px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .pub-link:hover {
+      background: var(--primary-blue);
+      color: white;
+      border-color: var(--primary-blue);
+      transform: translateY(-1px);
+    }
+
+    .more-publications {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      justify-content: center;
+    }
+
+    .more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: var(--primary-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .more-link:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-blue);
+      color: white;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      font-size: 14px;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .publication-card {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .publication-image {
+        width: 100%;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <nav>
+        <a href="index.html" class="logo">Md. Fahim Shahoriar Titu</a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="research.html" class="nav-link">Research</a></li>
+          <li><a href="publications.html" class="nav-link active">Publications</a></li>
+          <li><a href="teaching.html" class="nav-link">Experience</a></li>
+          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="assets/cv/CV_Md_Fahim_Shahoriar_Titu.pdf" class="cv-download" target="_blank">
+              <i class="fas fa-file-pdf"></i>
+              CV
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Publications Section -->
+  <section id="publications">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Research Publications</h2>
+        <p class="section-subtitle">Peer-Reviewed Journal Articles and Conference Papers</p>
+      </div>
+
+      <div class="publications-grid">
+        
+        <!-- ======================= 2025 ======================= -->
+
+        <!-- Pub 1: Root Canal -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub1.png" alt="Root Canal AI" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-tooth" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.1109/ACCESS.2025.3560998" target="_blank">
+                Fusion of Image Filtering and Knowledge-Distilled YOLO Models for Root Canal Failure Diagnosis
+              </a>
+            </h3>
+            <p class="publication-authors">
+              A.Z. Apurba, <span class="highlight">M.F.S. Titu</span>, M.A. Pavel, I.T. Naheen, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>IEEE Access, 2025</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge impact">IEEE Access</span>
+              <span class="meta-badge">Medical AI</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.1109/ACCESS.2025.3560998" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 2: Food Ads (First Author) -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub2.png" alt="XAI Food Ads" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-brain" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.1109/ACCESS.2025.3588190" target="_blank">
+                Predicting Adolescent Concern Over Unhealthy Food Ads Using Explainable AI
+              </a>
+            </h3>
+            <p class="publication-authors">
+              <span class="highlight">M.F.S. Titu</span>, M.R. Rahman, A.Z. Apurba, M.A. Qayum, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>IEEE Access, 2025</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge impact">IEEE Access</span>
+              <span class="meta-badge">XAI</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.1109/ACCESS.2025.3588190" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 3: Vehicle Damage -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub3.png" alt="Vehicle Damage" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-car-crash" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.3390/vehicles7030089" target="_blank">
+                Hybrid ViT-RetinaNet with Explainable Ensemble Learning for Fine-Grained Vehicle Damage Classification
+              </a>
+            </h3>
+            <p class="publication-authors">
+              A. Saha, M.A. Pavel, <span class="highlight">M.F.S. Titu</span>, A.Z. Apurba, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>Vehicles (MDPI), 2025</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge">Computer Vision</span>
+              <span class="meta-badge">ViT</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.3390/vehicles7030089" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 4: Kyber Encryption -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub4.png" alt="Kyber Encryption" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-lock" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Conference Paper</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.1109/qpain66474.2025.11171848" target="_blank">
+                Enhancing Image Security with Hybrid Chaos-Kyber Encryption: A Post-Quantum Approach
+              </a>
+            </h3>
+            <p class="publication-authors">
+              M.R.K. Khan, <span class="highlight">M.F.S. Titu</span>, I. Ahammed, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>IEEE Int. Conf. on Quantum Photonics & AI (QPAIN), 2025</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge impact">Post-Quantum</span>
+              <span class="meta-badge">Security</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.1109/qpain66474.2025.11171848" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= 2024 ======================= -->
+
+        <!-- Pub 5: Educational Tours -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub5.png" alt="Education" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-graduation-cap" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Preprint</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.31232/osf.io/dqgj8" target="_blank">
+                Educational Tours and Practical Learning in Food Processing: A Student Perspective Case Study
+              </a>
+            </h3>
+            <p class="publication-authors">
+              M.T. Aktar, A.Z. Apurba, <span class="highlight">M.F.S. Titu</span>
+            </p>
+            <p class="publication-venue">
+              <em>OSF Preprint, 2024</em>
+            </p>
+            <div class="publication-links">
+              <a href="https://doi.org/10.31232/osf.io/dqgj8" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 6: Fire Detection (First Author) -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub6.png" alt="Fire Drones" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-fire" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.3390/drones8090483" target="_blank">
+                Real-Time Fire Detection: Integrating Lightweight Deep Learning Models on Drones with Edge Computing
+              </a>
+            </h3>
+            <p class="publication-authors">
+              <span class="highlight">M.F.S. Titu</span>, M.A. Pavel, G.K.O. Michael, H. Babar, U. Aman, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>Drones (MDPI), 2024</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge impact">Q1 Journal</span>
+              <span class="meta-badge">Edge AI</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.3390/drones8090483" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 7: Kidney Cancer (First Author) -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub7.png" alt="Kidney Cancer" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-heartbeat" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.32896/ajmedtech.v4n1" target="_blank">
+                Kidney Cancerous Tumor Prediction Using CNN System Architecture
+              </a>
+            </h3>
+            <p class="publication-authors">
+              <span class="highlight">M.F.S. Titu</span>, M.H.M. Emon, S.A. Aumi, M.S. Bhuiyan, M.R. Rahman, M.F. Murshid
+            </p>
+            <p class="publication-venue">
+              <em>Asian Journal of Medical Technology, 2024</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge">Medical AI</span>
+              <span class="meta-badge">CNN</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.32896/ajmedtech.v4n1" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 8: Visual Pollution (First Author) -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub8.png" alt="Visual Pollution" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-city" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.3390/sci6010005" target="_blank">
+                Deep-Learning-Based Real-Time Visual Pollution Detection in Urban and Textile Environments
+              </a>
+            </h3>
+            <p class="publication-authors">
+              <span class="highlight">M.F.S. Titu</span>, A.A. Chowdhury, S.M.R. Haque, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>Sci (MDPI), 2024</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge">Environment</span>
+              <span class="meta-badge">Deep Learning</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.3390/sci6010005" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= 2023 ======================= -->
+
+        <!-- Pub 9: Cooperative Robots (First Author) -->
+        <div class="publication-card">
+          <div class="publication-image">
+            <img src="./assets/img/pub9.png" alt="Robotics" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+            <i class="fas fa-robot" style="display:none; margin: auto;"></i>
+          </div>
+          <div class="publication-details">
+            <span class="publication-type">Journal Article</span>
+            <h3 class="publication-title">
+              <a href="https://doi.org/10.1007/s41315-023-00305-y" target="_blank">
+                Experiments with Cooperative Robots that Detect Object’s Shape, Color, and Size
+              </a>
+            </h3>
+            <p class="publication-authors">
+              <span class="highlight">M.F.S. Titu</span>, S.M.R. Haque, R. Islam, A. Hossain, M.A. Qayum, R. Khan
+            </p>
+            <p class="publication-venue">
+              <em>Int. Journal of Intelligent Robotics and Applications (Springer), 2023</em>
+            </p>
+            <div class="publication-meta">
+              <span class="meta-badge impact">Springer</span>
+              <span class="meta-badge">Robotics</span>
+            </div>
+            <div class="publication-links">
+              <a href="https://doi.org/10.1007/s41315-023-00305-y" class="pub-link">
+                <i class="fas fa-external-link-alt"></i> DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="more-publications">
+        <a href="https://scholar.google.com/citations?user=3vlbC2sAAAAJ&hl=en" target="_blank" class="more-link">
+          See full list on Google Scholar <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=3vlbC2sAAAAJ&hl=en" target="_blank" class="footer-link">
+          Google Scholar
+        </a>
+        <a href="https://github.com/MdFahimShahoriar" target="_blank" class="footer-link">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/mdfahimshahoriartitu" target="_blank" class="footer-link">
+          LinkedIn
+        </a>
+      </div>
+      <p class="footer-text">
+        © 2025 Md. Fahim Shahoriar Titu. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Active navigation highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

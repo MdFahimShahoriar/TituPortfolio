@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience - Md. Fahim Shahoriar Titu">
+  
+  <title>Experience - Md. Fahim Shahoriar Titu</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-blue: #1e3a5f;
+      --accent-blue: #2e5090;
+      --light-blue: #4a7ba7;
+      --gold-accent: #b8860b;
+      
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --bg-tertiary: #f0f2f5;
+      
+      --text-primary: #2c3e50;
+      --text-secondary: #5a6c7d;
+      --text-light: #718096;
+      
+      --border-light: #e2e8f0;
+      --border-medium: #cbd5e0;
+      
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.08);
+      
+      --max-width: 1100px;
+      --serif: 'Crimson Text', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.5;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-blue);
+    }
+
+    /* Navigation */
+    header {
+      background: var(--bg-primary);
+      border-bottom: 2px solid var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-blue);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .cv-download {
+      padding: 8px 16px;
+      background: var(--primary-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cv-download:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 0;
+      background: var(--bg-secondary);
+      min-height: calc(100vh - 250px);
+    }
+
+    .section-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 30px;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+
+    /* Experience Grid */
+    .experience-category {
+      margin-bottom: 40px;
+    }
+    
+    .category-title {
+      font-size: 20px;
+      color: var(--accent-blue);
+      border-left: 4px solid var(--gold-accent);
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .teaching-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .teaching-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--primary-blue);
+    }
+
+    .duration {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .role-name {
+      font-family: var(--serif);
+      font-size: 19px;
+      color: var(--primary-blue);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .organization {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .role-details {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .role-details ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .role-details li {
+        margin-bottom: 6px;
+        position: relative;
+        padding-left: 16px;
+    }
+
+    .role-details li::before {
+        content: "•";
+        color: var(--gold-accent);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .location-tag {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-light);
+      font-size: 12px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Peer Review Specific Styles */
+    .review-item {
+      background: var(--bg-secondary);
+      padding: 16px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--gold-accent);
+    }
+
+    .review-journal {
+      font-weight: 600;
+      color: var(--primary-blue);
+      margin-bottom: 4px;
+    }
+
+    .review-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+      font-family: var(--mono);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-blue);
+      color: white;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      font-size: 14px;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .teaching-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <nav>
+        <a href="index.html" class="logo">Md. Fahim Shahoriar Titu</a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="research.html" class="nav-link">Research</a></li>
+          <li><a href="publications.html" class="nav-link">Publications</a></li>
+          <li><a href="teaching.html" class="nav-link active">Experience</a></li>
+          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="assets/cv/CV_Md_Fahim_Shahoriar_Titu.pdf" class="cv-download" target="_blank">
+              <i class="fas fa-file-pdf"></i>
+              CV
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Professional & Research Experience</h2>
+        <p class="section-subtitle">A timeline of my work in Cybersecurity, AI, and Academia</p>
+      </div>
+      
+      <!-- Professional Experience -->
+      <div class="experience-category">
+        <h3 class="category-title">Professional Experience</h3>
+        <div class="teaching-grid">
+          
+          <div class="teaching-card">
+            <div class="duration">Aug 2025 – Present</div>
+            <h3 class="role-name">Cybersecurity IT Audit Associate</h3>
+            <div class="organization">
+              <i class="fas fa-building"></i> ACNABIN, Chartered Accountants
+            </div>
+            <div class="role-details">
+              <ul>
+                <li>Performing IT and cybersecurity audits for banking and financial institutions, including NCC Bank PLC.</li>
+                <li>Evaluating information systems, database integrity, and access control for cybersecurity assurance.</li>
+                <li>Collaborating with cross-functional teams to enhance compliance through vulnerability analysis.</li>
+              </ul>
+            </div>
+            <div class="location-tag">
+              <i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh
+            </div>
+          </div>
+
+          <div class="teaching-card">
+            <div class="duration">Nov 2024 – Present</div>
+            <h3 class="role-name">Researcher & Programmer (Remote)</h3>
+            <div class="organization">
+              <i class="fas fa-laptop-code"></i> ZAR Consultancy Firm
+            </div>
+            <div class="role-details">
+              <ul>
+                <li>Conducting remote research and developing computational solutions for international consultancy projects.</li>
+                <li>Building data processing pipelines, automation tools, and analytical modules.</li>
+                <li>Collaborating virtually with teams across UAE and UK branches to optimize technical workflows.</li>
+              </ul>
+            </div>
+            <div class="location-tag">
+              <i class="fas fa-map-marker-alt"></i> UAE & UK (Remote)
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Research Experience -->
+      <div class="experience-category">
+        <h3 class="category-title">Academic Research</h3>
+        <div class="teaching-grid">
+          
+          <div class="teaching-card">
+            <div class="duration">Dec 2023 – Feb 2025</div>
+            <h3 class="role-name">Research Assistant</h3>
+            <div class="organization">
+              <i class="fas fa-university"></i> North South University
+            </div>
+            <div class="role-details">
+              <ul>
+                <li>Conducted AI-based research in computer vision, explainable learning (XAI), and post-quantum security.</li>
+                <li>Implemented models integrating YOLO, ViT, DINOv2, SAM, and Grad-CAM for explainable object detection.</li>
+                <li>Published multiple papers in IEEE, MDPI, and Springer under the supervision of Dr. Riasat Khan.</li>
+                <li>Investigated hybrid encryption utilizing Chaos theory and Kyber algorithms.</li>
+              </ul>
+            </div>
+            <div class="location-tag">
+              <i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Teaching & Volunteer -->
+      <div class="experience-category">
+        <h3 class="category-title">Teaching & Leadership</h3>
+        <div class="teaching-grid">
+          
+          <div class="teaching-card">
+            <div class="duration">2023 - 2024</div>
+            <h3 class="role-name">Teaching Assistant</h3>
+            <div class="organization">
+              <i class="fas fa-chalkboard-teacher"></i> Coding Bootcamp
+            </div>
+            <div class="role-details">
+              <p>
+                Mentored undergraduate students in Python programming and algorithmic problem-solving. Assisted in debugging code, clarifying concepts, and grading assignments to foster a strong foundation in computer science.
+              </p>
+            </div>
+            <div class="location-tag">
+              <i class="fas fa-users"></i> Mentorship
+            </div>
+          </div>
+
+          <div class="teaching-card">
+            <div class="duration">Volunteer</div>
+            <h3 class="role-name">Senior Member</h3>
+            <div class="organization">
+              <i class="fas fa-robot"></i> CEC Club (Promotion & Publication)
+            </div>
+            <div class="role-details">
+              <p>
+                Organized robotics workshops and national competitions. Led promotional activities and managed publications to engage the student body in engineering activities.
+              </p>
+            </div>
+            <div class="location-tag">
+              <i class="fas fa-star"></i> Leadership
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Peer Review Activities -->
+      <div class="experience-category">
+        <h3 class="category-title">Peer Review & Editorial Activities</h3>
+        <div class="teaching-grid">
+          
+          <div class="teaching-card" style="grid-column: 1 / -1;">
+            <div class="duration">2025</div>
+            <h3 class="role-name">Academic Reviewer</h3>
+            <div class="organization">
+              <i class="fas fa-check-circle"></i> 3 Reviews for 2 Publications/Grants
+            </div>
+            <div class="role-details">
+              <p style="margin-bottom: 12px; font-weight: 600;">Review Activity:</p>
+              
+              <div class="review-item">
+                <div class="review-journal">Journal of Food Measurement and Characterization</div>
+                <div class="review-meta">
+                  Springer Nature • ISSN: 2193-4134 • 2025
+                </div>
+                <p style="font-size: 13px; margin-top: 6px; color: var(--text-secondary);">
+                  Interdisciplinary journal publishing measurement results, characteristic properties, and procedures for food process innovation, quality control, and safety assurance.
+                </p>
+              </div>
+
+              <div class="review-item">
+                <div class="review-journal">Reliability Engineering & System Safety</div>
+                <div class="review-meta">
+                  Elsevier • ISSN: 0951-8320 • 2025
+                </div>
+                <p style="font-size: 13px; margin-top: 6px; color: var(--text-secondary);">
+                  Leading journal covering reliability engineering, system safety, and risk assessment methodologies.
+                </p>
+              </div>
+            </div>
+            <div class="location-tag">
+              <i class="fas fa-globe"></i> Springer Nature (Editorial Manager) & Elsevier Editorial
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=3vlbC2sAAAAJ&hl=en" target="_blank" class="footer-link">
+          Google Scholar
+        </a>
+        <a href="https://github.com/MdFahimShahoriar" target="_blank" class="footer-link">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/mdfahimshahoriartitu" target="_blank" class="footer-link">
+          LinkedIn
+        </a>
+      </div>
+      <p class="footer-text">
+        © 2025 Md. Fahim Shahoriar Titu. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Active navigation highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

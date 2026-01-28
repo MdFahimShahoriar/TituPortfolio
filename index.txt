@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Md Shawmoon Azad - PhD Researcher in Post-Quantum Cryptography at Cleveland State University">
+  
+  <!-- SEO & Open Graph -->
+  <meta property="og:title" content="Md Shawmoon Azad | Academic Portfolio">
+  <meta property="og:description" content="PhD Researcher specializing in Quantum Key Distribution, Post-Quantum Cryptography, and Explainable AI Systems">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shawmoonazad.github.io">
+  
+  <title>Md Shawmoon Azad - Academic Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Compact Academic color palette */
+      --primary-blue: #1e3a5f;
+      --accent-blue: #2e5090;
+      --light-blue: #4a7ba7;
+      --gold-accent: #b8860b;
+      
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --bg-tertiary: #f0f2f5;
+      
+      --text-primary: #2c3e50;
+      --text-secondary: #5a6c7d;
+      --text-light: #718096;
+      
+      --border-light: #e2e8f0;
+      --border-medium: #cbd5e0;
+      
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.08);
+      
+      --max-width: 1100px;
+      --serif: 'Crimson Text', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.5;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Typography - Compact */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-blue);
+    }
+
+    /* Navigation - Compact */
+    header {
+      background: var(--bg-primary);
+      border-bottom: 2px solid var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-blue);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .cv-download {
+      padding: 8px 16px;
+      background: var(--primary-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cv-download:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Hero Section - Compact */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+      padding: 50px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: var(--primary-blue);
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .hero-affiliation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .hero-affiliation i {
+      color: var(--gold-accent);
+    }
+
+    .hero-description {
+      font-family: var(--serif);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-medium);
+      border-radius: 4px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 13px;
+      transition: all 0.3s ease;
+    }
+
+    .hero-link:hover {
+      background: var(--primary-blue);
+      color: white;
+      border-color: var(--primary-blue);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .profile-section {
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-blue);
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .profile-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 12px;
+      background: var(--bg-primary);
+      border-radius: 6px;
+      border: 1px solid var(--border-light);
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    /* Section Styling - Compact */
+    section {
+      padding: 50px 0;
+    }
+
+    .section-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 30px;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+
+    /* News Section - Compact */
+    .news-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 24px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-item:hover {
+      background: var(--bg-primary);
+      margin: 0 -16px;
+      padding: 18px 16px;
+      border-radius: 6px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .news-date {
+      flex-shrink: 0;
+      width: 70px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4px;
+    }
+
+    .news-date .month {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .news-date .day {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      line-height: 1;
+      margin: 2px 0;
+    }
+
+    .news-date .year {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .news-content {
+      flex: 1;
+    }
+
+    .news-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .news-description {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .news-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .news-tag.quantum {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+
+    .news-tag.ai {
+      background: #fce7f3;
+      color: #a21caf;
+    }
+
+    .news-tag.milestone {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .view-all-news {
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .view-all-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .view-all-link:hover {
+      color: var(--accent-blue);
+      gap: 10px;
+    }
+
+    /* Footer - Compact */
+    footer {
+      background: var(--primary-blue);
+      color: white;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      font-size: 14px;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .nav-menu {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <nav>
+        <a href="index.html" class="logo">Md Shawmoon Azad</a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="research.html" class="nav-link">Research</a></li>
+          <li><a href="publications.html" class="nav-link">Publications</a></li>
+          <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="assets/cv/CV_Md_Shawmoon_Azad.pdf" class="cv-download">
+              <i class="fas fa-file-pdf"></i>
+              CV
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Md Shawmoon Azad</h1>
+        <div class="hero-title">Graduate Research Assistant</div>
+        
+        <div class="hero-affiliation">
+          <i class="fas fa-university"></i>
+          Intelligent Secure Cyber-Systems and Applications Research Lab (ISCAR-Lab), Cleveland State University
+        </div>
+        
+        <p class="hero-description">
+          Hi! I'm <strong>Md Shawmoon Azad</strong>, a researcher exploring the intersection of <strong>Quantum Security × AI</strong>. 
+          I'm currently pursuing my Ph.D. in Computer Science at Cleveland State University under the supervision of <strong>Dr. Sathish A. P. Kumar</strong>, 
+          where I work on <strong>Hybrid Post-Quantum TLS frameworks</strong> for quantum-safe cloud communication.<br><br>
+          Previously, I was a Research Assistant at the Optics-Quantum & AI Lab of North South University, supervised by <strong>Dr. Mahdy Rahman Chowdhury</strong> and I have also closely worked with <strong>Dr. Sifat Momen</strong>.<br><br> 
+          <strong>Research Interests:</strong> (I) NIST-Aligned Hybrid Quantum–Classical Cryptography, 
+          (II) Post-Quantum Communication Protocols, 
+          (III) Efficient Quantum Machine Learning (QML) for Constrained Hardware, 
+          (IV) Translational Quantum × AI Applications.<br><br>
+          Email me for collaborations or research discussions!
+        </p>
+     
+        <div class="hero-links">
+          <a href="mailto:m.azad@vikes.csuohio.edu" class="hero-link">
+            <i class="fas fa-envelope"></i>
+            CSU Email
+          </a>
+          <a href="mailto:shawmoon.cs@gmail.com" class="hero-link">
+            <i class="fas fa-envelope"></i>
+            Gmail
+          </a>
+          <a href="https://scholar.google.com/citations?user=qiLaY-AAAAAJ" target="_blank" class="hero-link">
+            <i class="ai ai-google-scholar"></i>
+            Scholar
+          </a>
+          <a href="https://orcid.org/0009-0005-1318-072X" target="_blank" class="hero-link">
+            <i class="ai ai-orcid"></i>
+            ORCID
+          </a>
+          <a href="https://github.com/shawmoonazad" target="_blank" class="hero-link">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/shawmoonazad" target="_blank" class="hero-link">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      
+      <div class="profile-section">
+        <img src="./assets/img/shawmoon.jpg" alt="Md Shawmoon Azad" class="profile-image">
+        
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-value">5+</span>
+            <span class="stat-label">Q1 Papers Published</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">14.9</span>
+            <span class="stat-label">Cumul. IF</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">~10</span>
+            <span class="stat-label">Students Mentored</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">~50</span>
+            <span class="stat-label">Citations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Updates Section -->
+  <section id="news" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">News & Updates</h2>
+        <p class="section-subtitle">Recent Achievements and Publications</p>
+      </div>
+      
+      <div class="news-container">
+        <div class="news-item">
+          <div class="news-date">
+            <span class="month">Sept</span>
+            <span class="day">09</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Published paper on Chaos-Assisted Quantum Key distribution research</h3>
+            <p class="news-description">
+              Our article on quantum-secure image transmission via chaos-assisted QKD (entanglement-based) is published in 
+              <em>IET Quantum Communication</em>. Thanks to collaborators!
+            </p>
+            <span class="news-tag quantum">Quantum Computing</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">
+            <span class="month">AUG</span>
+            <span class="day">22</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">My supervised QSAC Paper got Published</h3>
+            <p class="news-description">
+              "QSAC: Quantum-assisted Secure Audio Communication"—combining entanglement, audio steganography, and classical encryption—published in <em>Engineering Science & Technology</em>. Thanks to my student and co-authors!
+            </p>
+            <span class="news-tag quantum">Quantum Computing</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">
+            <span class="month">Aug</span>
+            <span class="day">14</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Started PhD at Cleveland State University (ISCAR Lab)</h3>
+            <p class="news-description">
+              I am joining Cleveland State University as a Fully Funded PhD student to advance hybrid quantum-classical security and quantum-safe cloud TLS.
+            </p>
+            <span class="news-tag milestone">Milestone</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">
+            <span class="month">JUL</span>
+            <span class="day">09</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Published paper on Multilayered QKD-Integrated Steganography research</h3>
+            <p class="news-description">
+              Our multi-layered security framework integrating QKD with classical crypto and DL-based steganography appears in 
+              <em>Alexandria Engineering Journal</em>.
+            </p>
+            <span class="news-tag quantum">Quantum computing</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">
+            <span class="month">AUG</span>
+            <span class="day">16</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Research on Self-Assessment Depression got Published</h3>
+            <p class="news-description">
+              Our ML + NLP study for culturally contextualized depression self-assessment among Bangladeshi university students is 
+              published in <em>ARRAY</em>.
+            </p>
+            <span class="news-tag ai">AI/Healthcare</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date">
+            <span class="month">DEC</span>
+            <span class="day">27</span>
+            <span class="year">2023</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Published research on Consumer Behavior Modeling</h3>
+            <p class="news-description">
+              Our TPB + ML work on predicting consumer purchase behavior is published in <em>PLOS ONE</em>.
+            </p>
+            <span class="news-tag ai">Machine Learning</span>
+          </div>
+        </div>
+
+        <div class="view-all-news">
+          <a href="publications.html" class="view-all-link">
+            View All Publications <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=qiLaY-AAAAAJ" target="_blank" class="footer-link">
+          Google Scholar
+        </a>
+        <a href="https://orcid.org/0009-0005-1318-072X" target="_blank" class="footer-link">
+          ORCID
+        </a>
+        <a href="https://github.com/shawmoonazad" target="_blank" class="footer-link">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/shawmoonazad" target="_blank" class="footer-link">
+          LinkedIn
+        </a>
+      </div>
+      <p class="footer-text">
+        © 2025 Md Shawmoon Azad. All rights reserved. | Last updated: October 2025
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Active navigation highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
